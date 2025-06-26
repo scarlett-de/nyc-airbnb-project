@@ -1,5 +1,3 @@
-# nyc-airbnb-project
-
 # Table of Contents  
 
 - [Project Overview](#project-overview)
