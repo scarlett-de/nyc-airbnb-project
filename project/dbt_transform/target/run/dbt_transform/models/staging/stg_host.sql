@@ -1,0 +1,13 @@
+
+
+  create or replace view `decamp-project-52560`.`ny_airbnb_staging_dataset`.`stg_host`
+  OPTIONS()
+  as WITH host AS (
+    SELECT DISTINCT 
+        CAST(host_id AS STRING) AS host_id,
+        host_name,
+        calculated_host_listings_count as host_listings_count
+    FROM `decamp-project-52560`.`raw_dataset`.`ny_airbnb_raw`
+)
+SELECT * FROM host;
+

@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: raw_dataset # ✅ The dataset in BigQuery (e.g., `raw`)
+    database: decamp-project-52560  # ✅ Replace with your GCP project ID
+    schema: raw_dataset # ✅ Matches the dataset name in BigQuery
+    tables:
+      - name: ny_airbnb_raw  # ✅ Matches the table name in BigQuery
+        description: "Raw Airbnb listings data"
+        columns:
+          - name: id
+            description: "Unique ID for each listing"
+          - name: name
+            description: "Listing title"
+          - name: host_id
+            description: "Unique ID for the host"
+          - name: host_name
+            description: "Name for the host"
+          - name: Neighbourhood_group
+            description: "neighbourhood_group"
+          - name: neighbourhood
+            description: "neighbourhood"
+          - name: latitude
+            description: "Latitude of the host"
+          - name: longitude
+            description: "longitude of the host"
+          - name: room_type
+            description: "Room type of the host"
+          - name: minimum_nights
+            description: "Minimium nights to stay"
+          - name: reviews_per_month
+            description: "Number of reviews per month"
+          - name: calculated_host_listings_count
+            description: "Count of host listings"
+          - name: availability_365
+            description: "Days of availbility of a year"
+       

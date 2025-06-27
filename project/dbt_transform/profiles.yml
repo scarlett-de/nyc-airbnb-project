@@ -1,0 +1,15 @@
+# /Users/yitian66/Documents/DE-Datacamp/Project/dbt_transform/profiles.yml
+profile:  # This must match your profile name in dbt_project.yml
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: /Users/yitian66/Documents/DE-Datacamp/Project/terraform/keys/my_creds.json
+      project: decamp-project-52560
+      dataset: ny_airbnb
+      location: US
+      threads: 1
+      timeout_seconds: 300
+      priority: interactive
+      retries: 1
